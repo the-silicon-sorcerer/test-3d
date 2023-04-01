@@ -1,0 +1,38 @@
+html,
+body {
+  user-select: none;
+}
+
+body {
+  background-color: grey;
+  display: grid;
+  place-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  height: 1350px;
+  width: 1080px;
+  scale: 0.8;
+}
+
+img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.boundContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  display: flex;
+}
+
+.bound {
+  flex: 1;
+}
