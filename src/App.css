@@ -1,19 +1,29 @@
 html,
 body {
   user-select: none;
+  -webkit-user-select: text; /* Safari fnoneback only */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
   background-color: grey;
-  display: grid;
-  place-items: center;
+  width: 100vh;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .imageContainer {
   position: relative;
   height: 1350px;
   width: 1080px;
-  scale: 0.8;
 }
 
 img {
