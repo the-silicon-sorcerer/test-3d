@@ -51,35 +51,9 @@ const App = () => {
 
   const genBound = () => {
     const gen = [];
-    for (let i = 1; i <= 15; i++) {
+    for (let i = 1; i <= 31; i++) {
       gen.push(
-        <div
-          key={i}
-          className="bound"
-          onMouseDown={() => {
-            setActive(i);
-          }}
-          onMouseUp={() => {
-            setActive(undefined);
-          }}
-          onMouseEnter={() => {
-            setActive(i);
-            if (drag && active && i > active) {
-              if (select === 31) {
-                setSelect(1);
-              } else {
-                setSelect(select + 1);
-              }
-            }
-            if (drag && active && i < active) {
-              if (select === 1) {
-                setSelect(31);
-              } else {
-                setSelect(select - 1);
-              }
-            }
-          }}
-        ></div>
+        <div key={i} className="bound" onClick={() => setSelect(i)}></div>
       );
     }
     return gen;
